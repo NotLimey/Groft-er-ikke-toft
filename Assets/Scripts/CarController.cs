@@ -16,8 +16,9 @@ public class CarController : MonoBehaviour
     private bool _isBreaking;
 
     public ParticleSystem smoke;
+    public Rigidbody Rb;
 
-    [SerializeField] private float motorForce;
+    [SerializeField] public float motorForce;
     [SerializeField] private float _breakForce;
     [SerializeField] private float maxSteeringAngle;
 
@@ -30,6 +31,8 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform frontRightWheel;
     [SerializeField] private Transform backLeftWheel;
     [SerializeField] private Transform backRightWheel;
+
+    public string CarSpeed;
 
     private void Update()
     {
@@ -45,12 +48,14 @@ public class CarController : MonoBehaviour
         HandleMotor();
         HandleSteering();
         //RotateWheels();
+
+        CarSpeed = (Rb.velocity.x * 2.8).ToString("f0");
     }
 
     private void HandleMotor()
     {
-        frontLeftWheelColider.motorTorque = _verticalInput * motorForce;
-        frontRightWheelColider.motorTorque = _verticalInput * motorForce;
+        backLeftWheelColider.motorTorque = _verticalInput * motorForce;
+        backRightWheelColider.motorTorque = _verticalInput * motorForce;
         if (_isBreaking)
             _currentBreakForce = _breakForce;
         if(_isBreaking)
