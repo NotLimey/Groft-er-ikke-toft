@@ -10,6 +10,6 @@ public class GameManager : MonoBehaviour
 
     public void FixedUpdate()
     {
-        SpeedLimiter.text = _carController.CarSpeed + " Km/h";
+        SpeedLimiter.text = _carController.CarSpeed;
     }
 }

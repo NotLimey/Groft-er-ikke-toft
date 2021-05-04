@@ -14,6 +14,7 @@ public class CarController : MonoBehaviour
     private float _currentBreakForce;
 
     private bool _isBreaking;
+    private bool _reverse;
 
     public ParticleSystem smoke;
     public Rigidbody Rb;
@@ -32,7 +33,16 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform backLeftWheel;
     [SerializeField] private Transform backRightWheel;
 
+    private float max_speed = 150;
+
     public string CarSpeed;
+    private float Speed;
+    private Vector3 startingPosition, speedvec;
+
+    private void Start()
+    {
+        startingPosition = transform.position;
+    }
 
     private void Update()
     {
@@ -49,13 +59,31 @@ public class CarController : MonoBehaviour
         HandleSteering();
         //RotateWheels();
 
-        CarSpeed = (Rb.velocity.x * 2.8).ToString("f0");
+
+        speedvec = ((transform.position - startingPosition) / Time.deltaTime);
+        Speed = (float)((int)speedvec.magnitude * 3.6);
+
+        startingPosition = transform.position;
+        if (_reverse)
+            CarSpeed = "R " + Speed.ToString("f0") + "Km/h";
+        else { CarSpeed = Speed.ToString("f0") + "Km/h"; }
+        
     }
 
     private void HandleMotor()
     {
-        backLeftWheelColider.motorTorque = _verticalInput * motorForce;
-        backRightWheelColider.motorTorque = _verticalInput * motorForce;
+
+        if (Speed < max_speed)
+        {
+            backLeftWheelColider.motorTorque = _verticalInput * motorForce;
+            backRightWheelColider.motorTorque = _verticalInput * motorForce;
+        }
+        else
+        {
+            backLeftWheelColider.motorTorque = 0;
+            backRightWheelColider.motorTorque = 0;
+        }
+
         if (_isBreaking)
             _currentBreakForce = _breakForce;
         if(_isBreaking)
