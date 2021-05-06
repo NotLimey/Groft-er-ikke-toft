@@ -57,7 +57,7 @@ public class CarController : MonoBehaviour
         GetInput();
         HandleMotor();
         HandleSteering();
-        //RotateWheels();
+        RotateWheels();
 
 
         speedvec = ((transform.position - startingPosition) / Time.deltaTime);
@@ -125,7 +125,7 @@ public class CarController : MonoBehaviour
         _verticalInput = Input.GetAxis(VERTICAL);
         _isBreaking = Input.GetKey(KeyCode.Space);
     }
-    /*
+    
     private void RotateWheels()
     {
         UpdateSingleWheel(frontLeftWheelColider, frontLeftWheel);
@@ -137,7 +137,14 @@ public class CarController : MonoBehaviour
     private void UpdateSingleWheel(WheelCollider wheelColider, Transform wheelTransform)
     {
         Vector3 pos;
+        Quaternion rot;
         wheelColider.GetWorldPose(out pos, out rot);
         wheelTransform.position = pos;
-    }*/
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Time.timeScale = 0.05f;
+        Time.fixedDeltaTime = Time.timeScale * 0.02f;
+    }
 }

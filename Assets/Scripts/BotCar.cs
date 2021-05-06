@@ -5,20 +5,26 @@ using UnityEngine;
 public class BotCar : MonoBehaviour
 {
     public int constantspeed;
-    public Rigidbody Rb;
 
+    public Rigidbody Rb;
     private Transform Car;
+
+    private bool _haveCrashed = false;
 
     public void Start()
     {
+        Rb.useGravity = false;
         Car = GameObject.Find("Car").GetComponent<Transform>();
     }
 
     public void FixedUpdate()
     {
-        Vector3 v = Rb.velocity;
-        v.x = constantspeed;
-        Rb.velocity = -v;
+        if(!_haveCrashed)
+        {
+            Vector3 v = Rb.velocity;
+            v.x = constantspeed;
+            Rb.velocity = -v;
+        }
 
         CheckPositionToCar();
     }
@@ -28,6 +34,12 @@ public class BotCar : MonoBehaviour
         if(collision.gameObject.tag == "BotCar")
         {
             Destroy(gameObject);
+        }
+        if(collision.gameObject.tag == "Car")
+        {
+            Rb.drag = 10;
+            Rb.useGravity = true;
+            _haveCrashed = true;
         }
     }
 

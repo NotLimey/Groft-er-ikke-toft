@@ -6,7 +6,6 @@ public class CarSpawnPoint : MonoBehaviour
 {
     public Transform Car;
     public float SpaceBeetweenCars;
-    public float xPosition;
 
     void FixedUpdate()
     {
