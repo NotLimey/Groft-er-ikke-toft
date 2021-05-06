@@ -13,7 +13,7 @@ public class CarSpawner : MonoBehaviour
 
     void Start()
     {
-        WaitForSeconds();
+        InvokeRepeating("SpawnVehicles", startDelay, spawnInterval);
     }
     
     public Transform GetSpawnPoints()
@@ -40,11 +40,5 @@ public class CarSpawner : MonoBehaviour
         GameObject v = Instantiate(Vehicle, spawnpoint.position, spawnpoint.rotation) as GameObject;
         _activeCars.Add(v);
         return v;
-    }
-
-    IEnumerable WaitForSeconds()
-    {
-        yield return new WaitForSeconds(Random.Range(1, 3));
-        SpawnVehicles();
     }
 }
