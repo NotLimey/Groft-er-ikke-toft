@@ -5,8 +5,8 @@ public class MapManager : MonoBehaviour
 {
     public GameObject Tile;
     public Transform Car;
-    public float ZSpawn = 0;
-    public float TileLength = 100;
+    public float ZSpawn = 50;
+    public float TileLength = 351;
     public int NumberOfTiles = 5;
 
     private List<GameObject> _activeTiles = new List<GameObject>();
@@ -21,7 +21,7 @@ public class MapManager : MonoBehaviour
 
     void Update()
     {
-        if (Car.position.x - 105 > ZSpawn - (NumberOfTiles * TileLength))
+        if (Car.position.x - 356 > ZSpawn - (NumberOfTiles * TileLength))
         {
             SpawnTile();
             DeleteTile();
@@ -36,7 +36,7 @@ public class MapManager : MonoBehaviour
 
     public void SpawnTile()
     {
-        GameObject go = Instantiate(Tile, transform.right * ZSpawn, transform.rotation);
+        GameObject go = Instantiate(Tile, transform.forward * ZSpawn, transform.rotation);
         _activeTiles.Add(go);
         ZSpawn += TileLength;
     }

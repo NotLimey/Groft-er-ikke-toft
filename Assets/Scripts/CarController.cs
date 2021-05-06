@@ -12,12 +12,14 @@ public class CarController : MonoBehaviour
     private float _verticalInput;
     private float _steerAngle;
     private float _currentBreakForce;
+    public float promille;
 
     private bool _isBreaking;
     private bool _reverse;
 
     public ParticleSystem smoke;
     public Rigidbody Rb;
+    public StoredVariables storedVariables;
 
     [SerializeField] public float motorForce;
     [SerializeField] private float _breakForce;
@@ -39,17 +41,13 @@ public class CarController : MonoBehaviour
     private float Speed;
     private Vector3 startingPosition, speedvec;
 
+    private float TimeBeetween;
+
     private void Start()
     {
         startingPosition = transform.position;
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown(VERTICAL))
-        {
-            smoke.Play();
-        }
+        promille = StoredVariables.Promille;
+        drunk();
     }
 
     private void FixedUpdate()
@@ -75,8 +73,8 @@ public class CarController : MonoBehaviour
 
         if (Speed < max_speed)
         {
-            backLeftWheelColider.motorTorque = _verticalInput * motorForce;
-            backRightWheelColider.motorTorque = _verticalInput * motorForce;
+            frontLeftWheelColider.motorTorque = _verticalInput * motorForce;
+            frontRightWheelColider.motorTorque = _verticalInput * motorForce;
         }
         else
         {
@@ -142,9 +140,30 @@ public class CarController : MonoBehaviour
         wheelTransform.position = pos;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void SetDrunkTimer()
     {
-        Time.timeScale = 0.05f;
-        Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        if (promille > .3)
+        {
+            TimeBeetween = 3f;
+        }else
+        {
+            TimeBeetween = 4;
+        }
+            
+        if (promille > .8)
+            TimeBeetween = 1.8f;
+        if (promille > 1.2)
+            TimeBeetween = 1.3f;
+        if (promille > 1.8)
+            TimeBeetween = .8f;
+        if (promille > 2.3)
+            TimeBeetween = .3f;
+    }
+
+    IEnumerable drunk()
+    {
+        yield return new WaitForSeconds(TimeBeetween);
+
+        drunk();
     }
 }

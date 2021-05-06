@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4b6a7a0878aef5641a439ecc6ebb5604
+guid: a6243839a4836bc44ae58fb840982a82
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
@@ -7,33 +7,73 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Car Material
-    second: {fileID: 2100000, guid: 5270fb67d98e2e04d8716e43d62a3504, type: 2}
+      name: Blad 2.005
+    second: {fileID: 2100000, guid: 7a0e41ca917c3334a8a2e6789f2285a9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Car window
-    second: {fileID: 2100000, guid: d12f1cfac90885244995610a42fa14b3, type: 2}
+      name: Blad 4.005
+    second: {fileID: 2100000, guid: d8d170325a4ceb442b4204476747626e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Felge
-    second: {fileID: 2100000, guid: 5d5f53ec057b5f344bb309876b7dfa1c, type: 2}
+      name: Blad 5.005
+    second: {fileID: 2100000, guid: 0fb8eac7c3ba526499a917a25e97ff4a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Hjul rom
-    second: {fileID: 2100000, guid: 26f4de3bd2ee6e347aba6ced13a88ee2, type: 2}
+      name: Fortau
+    second: {fileID: 2100000, guid: 228e4791de3e940469fc831dc18bd674, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Svart.001
-    second: {fileID: 2100000, guid: c6a16f514f795bd4896e23e735c65419, type: 2}
+      name: Gress
+    second: {fileID: 2100000, guid: 7ac1fd305a04f6f4fbc26813139e3311, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tire
-    second: {fileID: 2100000, guid: 0c8c95c77faf94e4697371e79d46ead5, type: 2}
+      name: Jord
+    second: {fileID: 2100000, guid: d58979832d0daa1418dca51b5fd1a39c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Linje
+    second: {fileID: 2100000, guid: 1755e6c18a7351346b8baf33a27dedf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lyktestolpe
+    second: {fileID: 2100000, guid: 1c38b3ecb6ffc8540bbb8d6fa4412657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.010
+    second: {fileID: 2100000, guid: d03103a77ec82cf4a976b1432f51d315, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.011
+    second: {fileID: 2100000, guid: 170399c39981e204b895df425f95921b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Sn\xF8"
+    second: {fileID: 2100000, guid: 38b89e6d68206ad419f311a4f38a47a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stein
+    second: {fileID: 2100000, guid: 0efd33aba0cf2e149a1528b6a0bae8d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vann
+    second: {fileID: 2100000, guid: c8a8d27402af1ba45beebaee12380489, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Veg
+    second: {fileID: 2100000, guid: 7667163f7799d8a4aa8ee5220b8f0761, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -64,7 +104,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.4
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -115,7 +155,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.004
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
