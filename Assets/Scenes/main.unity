@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &59568860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59568861}
+  - component: {fileID: 59568862}
+  m_Layer: 0
+  m_Name: Car spawn position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &59568861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59568860}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 28.050426, y: 0.95, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &59568862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59568860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401a3c2ee9d5098419550647cd7ff3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Car: {fileID: 796050578}
+  SpaceBeetweenCars: 250
+  xPosition: 0
 --- !u!1 &302165085
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,7 +5421,7 @@ MonoBehaviour:
   smoke: {fileID: 302165088}
   Rb: {fileID: 796050577}
   motorForce: 1000
-  _breakForce: 4500
+  _breakForce: 1e+18
   maxSteeringAngle: 30
   frontLeftWheelColider: {fileID: 565201983}
   frontRightWheelColider: {fileID: 897004504}
@@ -5915,6 +5961,7 @@ GameObject:
   - component: {fileID: 1969373480}
   - component: {fileID: 1969373479}
   - component: {fileID: 1969373481}
+  - component: {fileID: 1969373482}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5963,9 +6010,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tile: {fileID: 7548404333930812049, guid: 02ba9ef1f25cb884aad6a5217776922d, type: 3}
-  Cars:
-  - {fileID: 919132149155446097, guid: 4b6a7a0878aef5641a439ecc6ebb5604, type: 3}
   Car: {fileID: 796050578}
   ZSpawn: 0
   TileLength: 100
   NumberOfTiles: 5
+--- !u!114 &1969373482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969373478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37850174a30fd4d4787d8ee5065b3745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 59568861}
+  carPrefabs:
+  - {fileID: 919132149155446097, guid: 4b6a7a0878aef5641a439ecc6ebb5604, type: 3}
