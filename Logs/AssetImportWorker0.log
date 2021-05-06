@@ -75,3 +75,4 @@ Received Import Request.
   path: Assets/Scripts/CarSpawner.cs
   artifactKey: Guid(37850174a30fd4d4787d8ee5065b3745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/CarSpawner.cs using Guid(37850174a30fd4d4787d8ee5065b3745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f371e91ac592907bb4e3f692d6832a68') in 0.117458 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
