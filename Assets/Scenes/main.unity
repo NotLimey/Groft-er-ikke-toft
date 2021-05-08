@@ -861,6 +861,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4561358126793315431, guid: 1d0f1d76bd1bacf47a5fff0364f0550e, type: 3}
+      propertyPath: motorForce
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561358126793315431, guid: 1d0f1d76bd1bacf47a5fff0364f0550e, type: 3}
       propertyPath: storedVariables
       value: 
       objectReference: {fileID: 1969373483}
