@@ -22,7 +22,7 @@ public class BotCar : MonoBehaviour
         if(!_haveCrashed)
         {
             Vector3 v = Rb.velocity;
-            v.x = constantspeed;
+            v.z = constantspeed;
             Rb.velocity = -v;
         }
 
@@ -45,7 +45,12 @@ public class BotCar : MonoBehaviour
 
     private void CheckPositionToCar()
     {
-        if(transform.position.x < (Car.position.x -200) || transform.position.y < 0 || transform.position.z > 5)
+        if (transform.rotation.y != 180)
+        {
+            var y = transform.rotation.y;
+            transform.rotation = new Quaternion(transform.rotation.x, 180, transform.rotation.z, 0);
+        }
+        if(transform.position.z < (Car.position.z -200) || transform.position.y < -1)
         {
             Destroy(gameObject);
         }

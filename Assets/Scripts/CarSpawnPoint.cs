@@ -9,6 +9,6 @@ public class CarSpawnPoint : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = new Vector3(SpaceBeetweenCars + Car.position.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y, SpaceBeetweenCars + Car.position.z);
     }
 }

@@ -16,8 +16,7 @@ public class CarController : MonoBehaviour
 
     private bool _isBreaking;
     private bool _reverse;
-
-    public ParticleSystem smoke;
+    
     public Rigidbody Rb;
     public StoredVariables storedVariables;
 
@@ -87,7 +86,6 @@ public class CarController : MonoBehaviour
         if(_isBreaking)
         {
             ApplyBreaking();
-            smoke.Stop();
         }else
         {
             RemoveBreaking();
