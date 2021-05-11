@@ -6,16 +6,18 @@ public class TweenScript : MonoBehaviour
 {
     public float TweenTime;
 
-    public void OnMouseOver()
+    void OnMouseOver()
     {
+        Debug.Log("Over");
         LeanTween.cancel(gameObject);
         transform.localScale = Vector3.one;
 
         LeanTween.scale(gameObject, Vector3.one * 1.2f, TweenTime);
     }
 
-    public void OnMouseExit()
+    void OnMouseExit()
     {
+        Debug.Log("Exit");
         LeanTween.cancel(gameObject);
         transform.localScale = Vector3.one;
 
