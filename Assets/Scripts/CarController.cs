@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class CarController : MonoBehaviour
 {
@@ -34,6 +37,13 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform backLeftWheel;
     [SerializeField] private Transform backRightWheel;
 
+    public Image blackImage;
+    public Camera Main;
+    public Camera FirstAnimation; 
+    public Camera Hastaganimation;
+
+    public GameObject HUD;
+
     private float max_speed = 150;
 
     public string CarSpeed;
@@ -44,9 +54,14 @@ public class CarController : MonoBehaviour
 
     private void Start()
     {
+        Main.gameObject.SetActive(true);
+        FirstAnimation.gameObject.SetActive(false);
+        Hastaganimation.gameObject.SetActive(false);
+        HUD.SetActive(true);
+
+        blackImage.gameObject.SetActive(false);
         startingPosition = transform.position;
         promille = StoredVariables.Promille;
-        drunk();
     }
 
     private void FixedUpdate()
@@ -158,10 +173,43 @@ public class CarController : MonoBehaviour
             TimeBeetween = .3f;
     }
 
-    IEnumerable drunk()
+    
+    IEnumerator SetRandomSteeringAngle()
     {
-        yield return new WaitForSeconds(TimeBeetween);
+        yield return new WaitForSeconds(.8f);
+        _steerAngle = UnityEngine.Random.Range(10, 90);
+        StartCoroutine(SetRandomSteeringAngle());
+    }
 
-        drunk();
+    private void OnTriggerEnter(Collider other)
+    {
+        StartCoroutine(Crashed());
+        StoredVariables.HasCrashed = true;
+    }
+
+    IEnumerator Crashed()
+    {
+        blackImage.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        blackImage.gameObject.SetActive(false);
+        Main.gameObject.SetActive(false);
+        HUD.SetActive(false);
+        if (!StoredVariables.HasCrashed)
+        {
+            FirstAnimation.gameObject.SetActive(true);
+            yield return new WaitForSeconds(10);
+            FirstAnimation.gameObject.SetActive(false);
+            Hastaganimation.gameObject.SetActive(true);
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(1);
+        }
+            
+        if (StoredVariables.HasCrashed)
+        {
+            Hastaganimation.gameObject.SetActive(true);
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(1);
+        }
+            
     }
 }

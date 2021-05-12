@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public CarController _carController;
     public StoredVariables StoredV;
     public RawImage Vignett;
+    public Image Blur;
 
     public float TimeBeetweenVelocityDisplay = 0;
 
@@ -72,6 +73,10 @@ public class GameManager : MonoBehaviour
             Color currentColor = Vignett.color;
             currentColor.a = alpha;
             Vignett.color = currentColor;
+
+            Color currentColor2 = Blur.color;
+            currentColor2.a = alpha;
+            Blur.color = currentColor2;
         }
     }
 

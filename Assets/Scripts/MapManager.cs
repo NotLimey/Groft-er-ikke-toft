@@ -21,7 +21,7 @@ public class MapManager : MonoBehaviour
 
     void Update()
     {
-        if (Car.position.x - 356 > ZSpawn - (NumberOfTiles * TileLength))
+        if (Car.position.z - 356 > ZSpawn - (NumberOfTiles * TileLength))
         {
             SpawnTile();
             DeleteTile();

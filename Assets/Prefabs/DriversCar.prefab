@@ -689,6 +689,7 @@ GameObject:
   - component: {fileID: 8803396621562335539}
   - component: {fileID: 2606786660546038447}
   - component: {fileID: 6790287610712905505}
+  - component: {fileID: 8539927306098153716}
   m_Layer: 0
   m_Name: DriversCar
   m_TagString: Untagged
@@ -744,8 +745,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5222123, y: 1.2163299, z: 3.0029893}
-  m_Center: {x: 0, y: 0.5885716, z: 0.016207457}
+  m_Size: {x: 1.5034517, y: 1.2163299, z: 3.0029893}
+  m_Center: {x: -0.009380281, y: 0.5885716, z: 0.016207457}
 --- !u!114 &6790287610712905505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,7 +760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promille: 0
-  smoke: {fileID: 0}
   Rb: {fileID: 8803396621562335539}
   storedVariables: {fileID: 0}
   motorForce: 3000
@@ -773,7 +773,25 @@ MonoBehaviour:
   frontRightWheel: {fileID: 1634589942913492778}
   backLeftWheel: {fileID: 5952498136541832560}
   backRightWheel: {fileID: 8309673197549978715}
+  blackImage: {fileID: 0}
+  Main: {fileID: 0}
+  FirstAnimation: {fileID: 0}
+  Hastaganimation: {fileID: 0}
+  HUD: {fileID: 0}
   CarSpeed: 
+--- !u!65 &8539927306098153716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495524136869502674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6270843, y: 1.2145976, z: 3.1412978}
+  m_Center: {x: -0.0025782585, y: 0.6551563, z: -0.0034496188}
 --- !u!1 &4746585704644261728
 GameObject:
   m_ObjectHideFlags: 0

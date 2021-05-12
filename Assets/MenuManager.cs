@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
     public Canvas MainMenu;
     public Canvas StartCanvas;
     public Canvas Settings;
+    public Canvas Tutorial;
 
     public VideoPlayer MyVideoPlayer;
 
@@ -25,7 +26,9 @@ public class MenuManager : MonoBehaviour
             MainMenu.gameObject.SetActive(true);
             StartCanvas.gameObject.SetActive(false);
             Settings.gameObject.SetActive(false);
-        }else
+            Tutorial.gameObject.SetActive(false);
+        }
+        else
         {
             PlayAnimation();
         }
@@ -41,7 +44,14 @@ public class MenuManager : MonoBehaviour
     {
         StoredVariables storedVariables = this.GetComponent<StoredVariables>();
         storedVariables.Setvalue(PromilleSlider.value, TimeOfDaySlider.value);
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
+    }
+
+    public void StartFirstGame()
+    {
+        StoredVariables storedVariables = this.GetComponent<StoredVariables>();
+        storedVariables.Setvalue(2, 12);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void GoToStart()
@@ -73,7 +83,17 @@ public class MenuManager : MonoBehaviour
     IEnumerator StartFirstScene()
     {
         yield return new WaitForSeconds(10);
+        MyVideoPlayer.Stop();
         StoredVariables.Promille = 2;
-        SceneManager.LoadScene(1);
+        StoredVariables.HasPlayed = true;
+        LoadTutorial();
+    }
+
+    private void LoadTutorial()
+    {
+        MainMenu.gameObject.SetActive(false);
+        StartCanvas.gameObject.SetActive(false);
+        Settings.gameObject.SetActive(false);
+        Tutorial.gameObject.SetActive(true);
     }
 }
