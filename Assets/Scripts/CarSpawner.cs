@@ -7,7 +7,6 @@ public class CarSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] carPrefabs;
     private float startDelay = 0f;
-    private float spawnInterval = 2f;
 
     private List<GameObject> _activeCars = new List<GameObject>();
 

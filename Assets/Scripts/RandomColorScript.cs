@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RandomColorScript : MonoBehaviour
 {
-    public Renderer renderer;
+    public Renderer MaterialRenderer;
 
     public void Awake()
     {
-        renderer.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 0.9f);
+        MaterialRenderer.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 0.9f);
     }
 }

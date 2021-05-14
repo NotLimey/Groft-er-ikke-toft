@@ -50,8 +50,6 @@ public class CarController : MonoBehaviour
     private float Speed;
     private Vector3 startingPosition, speedvec;
 
-    private float TimeBeetween;
-
     private void Start()
     {
         Main.gameObject.SetActive(true);
@@ -152,27 +150,6 @@ public class CarController : MonoBehaviour
         wheelColider.GetWorldPose(out pos, out rot);
         wheelTransform.position = pos;
     }
-
-    public void SetDrunkTimer()
-    {
-        if (promille > .3)
-        {
-            TimeBeetween = 3f;
-        }else
-        {
-            TimeBeetween = 4;
-        }
-            
-        if (promille > .8)
-            TimeBeetween = 1.8f;
-        if (promille > 1.2)
-            TimeBeetween = 1.3f;
-        if (promille > 1.8)
-            TimeBeetween = .8f;
-        if (promille > 2.3)
-            TimeBeetween = .3f;
-    }
-
     
     IEnumerator SetRandomSteeringAngle()
     {
