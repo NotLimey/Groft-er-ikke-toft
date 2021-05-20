@@ -434,7 +434,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 60
 --- !u!222 &248215441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d8c739d3af438e64e89a98b99a913f1f, type: 3}
+  m_Texture: {fileID: 2800000, guid: c6428fa4c2a970b428808066a97ddb63, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2424,7 +2424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d8c739d3af438e64e89a98b99a913f1f, type: 3}
+  m_Texture: {fileID: 2800000, guid: c6428fa4c2a970b428808066a97ddb63, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3307,7 +3307,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 60
 --- !u!222 &1018076838
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3860,7 +3860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d8c739d3af438e64e89a98b99a913f1f, type: 3}
+  m_Texture: {fileID: 2800000, guid: c6428fa4c2a970b428808066a97ddb63, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5765,7 +5765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d8c739d3af438e64e89a98b99a913f1f, type: 3}
+  m_Texture: {fileID: 2800000, guid: c6428fa4c2a970b428808066a97ddb63, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
