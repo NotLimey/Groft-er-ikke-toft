@@ -161,7 +161,6 @@ public class CarController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         StartCoroutine(Crashed());
-        StoredVariables.HasCrashed = true;
     }
 
     IEnumerator Crashed()
@@ -178,6 +177,7 @@ public class CarController : MonoBehaviour
             FirstAnimation.gameObject.SetActive(false);
             Hastaganimation.gameObject.SetActive(true);
             yield return new WaitForSeconds(3);
+            StoredVariables.HasCrashed = true;
             SceneManager.LoadScene(1);
         }
             
@@ -185,6 +185,7 @@ public class CarController : MonoBehaviour
         {
             Hastaganimation.gameObject.SetActive(true);
             yield return new WaitForSeconds(3);
+            StoredVariables.HasCrashed = true;
             SceneManager.LoadScene(1);
         }
             

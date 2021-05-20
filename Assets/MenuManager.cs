@@ -30,6 +30,10 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
+            MainMenu.gameObject.SetActive(false);
+            StartCanvas.gameObject.SetActive(false);
+            Settings.gameObject.SetActive(false);
+            Tutorial.gameObject.SetActive(false);
             PlayAnimation();
         }
     }

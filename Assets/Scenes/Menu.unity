@@ -813,7 +813,6 @@ GameObject:
   - component: {fileID: 346864121}
   - component: {fileID: 346864124}
   - component: {fileID: 346864125}
-  - component: {fileID: 346864126}
   - component: {fileID: 346864127}
   m_Layer: 5
   m_Name: Start
@@ -1032,18 +1031,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 339.82574, y: 127.26108}
   m_EdgeRadius: 0
---- !u!114 &346864126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346864119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e8443e9d9c4514191d4e8d456f990c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &346864127
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1242,7 +1229,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 54.4
 --- !u!222 &399671937
 CanvasRenderer:
   m_ObjectHideFlags: 0
