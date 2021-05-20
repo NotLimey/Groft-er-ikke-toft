@@ -18,6 +18,8 @@ public class MenuManager : MonoBehaviour
 
     public VideoPlayer MyVideoPlayer;
 
+    public AudioSource Music;
+
     public void Start()
     {
 
@@ -34,6 +36,7 @@ public class MenuManager : MonoBehaviour
             StartCanvas.gameObject.SetActive(false);
             Settings.gameObject.SetActive(false);
             Tutorial.gameObject.SetActive(false);
+            Music.Stop();
             PlayAnimation();
         }
     }
@@ -88,6 +91,7 @@ public class MenuManager : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         MyVideoPlayer.Stop();
+        Music.Play();
         StoredVariables.Promille = 2;
         StoredVariables.HasPlayed = true;
         LoadTutorial();
