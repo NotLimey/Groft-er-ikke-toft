@@ -4062,6 +4062,7 @@ MonoBehaviour:
   Settings: {fileID: 959320918}
   Tutorial: {fileID: 2003705417}
   MyVideoPlayer: {fileID: 1002409423}
+  Music: {fileID: 1002409424}
 --- !u!114 &1384894990
 MonoBehaviour:
   m_ObjectHideFlags: 0
