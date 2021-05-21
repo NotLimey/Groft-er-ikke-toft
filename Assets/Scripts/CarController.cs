@@ -57,6 +57,7 @@ public class CarController : MonoBehaviour
         Hastaganimation.gameObject.SetActive(false);
         HUD.SetActive(true);
 
+        StartCoroutine(SwingRandomly());
         blackImage.gameObject.SetActive(false);
         startingPosition = transform.position;
         promille = StoredVariables.Promille;
@@ -161,6 +162,24 @@ public class CarController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         StartCoroutine(Crashed());
+    }
+
+    IEnumerator SwingRandomly()
+    {
+        var L = -1;
+        var R = 1;
+        var turnLeftForce = L * promille;
+        var turnRightForce = R * promille;
+
+        yield return new WaitForSeconds(UnityEngine.Random.Range(0.8f, 2.8f));
+        var rot = transform.rotation;
+        var newrot = rot * Quaternion.Euler(0, UnityEngine.Random.Range(turnLeftForce, turnRightForce), 0);
+        transform.rotation = newrot;
+
+        Debug.Log(turnLeftForce);
+        Debug.Log(turnRightForce);
+
+        StartCoroutine(SwingRandomly());
     }
 
     IEnumerator Crashed()

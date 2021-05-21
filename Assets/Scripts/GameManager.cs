@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,14 +13,53 @@ public class GameManager : MonoBehaviour
     public RawImage Vignett;
     public Image Blur;
 
+    public bool SliderActive = false;
+
+    public GameObject infoBackground;
+    public GameObject infoStartText;
+    public GameObject SpeedometerInfo;
+    public GameObject Text1;
+    public GameObject Text2;
+
+    public GameObject NextImgButton;
+
     public float TimeBeetweenVelocityDisplay = 0;
 
     float alpha = 1.0f;
 
+    private int infoOn = 1;
+
     public void Start()
     {
         CheckPromille();
-        StartCoroutine(DisplayVelocity());
+        if(!StoredVariables.HasPlayed)
+        {
+            Time.timeScale = 0;
+            infoBackground.SetActive(true);
+            infoStartText.SetActive(true);
+            NextImgButton.SetActive(true);
+            SpeedometerInfo.SetActive(false);
+            Text1.SetActive(false);
+            Text2.SetActive(false);
+            SliderActive = true;
+        }else
+        {
+            Time.timeScale = 1;
+            infoBackground.SetActive(false);
+            SpeedometerInfo.SetActive(false);
+            Text1.SetActive(false);
+            Text2.SetActive(false);
+            StartCoroutine(DisplayVelocity());
+        }
+    }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && SliderActive)
+        {
+            FadeOut();
+            Debug.Log("Yes");
+        }
     }
 
     private void CheckPromille()
@@ -78,6 +118,21 @@ public class GameManager : MonoBehaviour
             currentColor2.a = alpha;
             Blur.color = currentColor2;
         }
+    }
+
+    public void FadeOut()
+    {
+        
+    }
+
+    private void StartGame()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void FadeIn()
+    {
+        
     }
 
     IEnumerator DisplayVelocity()
