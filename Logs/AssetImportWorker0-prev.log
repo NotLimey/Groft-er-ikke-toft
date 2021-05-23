@@ -1,137 +1,378 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.5f1 (3737af19df53) revision 3618735'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 65384 MB
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16190 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-D:\Repos\2021.1.5f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.1.5f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Repos/Groft-er-ikke-toft
+C:/Users/Martin/source/repos/Grøft ae'kke tøft
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64314
-Successfully changed project path to: D:/Repos/Groft-er-ikke-toft
-D:/Repos/Groft-er-ikke-toft
+50477
+Successfully changed project path to: C:/Users/Martin/source/repos/Grøft ae'kke tøft
+C:/Users/Martin/source/repos/Grøft ae'kke tøft
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 68.89 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 85.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.5f1 (3737af19df53)
-[Subsystems] Discovering subsystems at path D:/Repos/2021.1.5f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Repos/Groft-er-ikke-toft/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Martin/source/repos/Grøft ae'kke tøft/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
-    Vendor:   NVIDIA
-    VRAM:     5980 MB
-    Driver:   27.21.14.6140
+    Renderer: AMD Radeon Pro WX3200 Graphics (ID=0x6981)
+    Vendor:   ATI
+    VRAM:     4076 MB
+    Driver:   27.20.11023.9002
 Initialize mono
-Mono path[0] = 'D:/Repos/2021.1.5f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Repos/2021.1.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/Repos/2021.1.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Repos/2021.1.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001080 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002181 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 73.05 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 89.24 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.892 seconds
+- Completed reload, in  1.795 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002697 seconds.
+Registered in 0.002746 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
+- Completed reload, in  1.058 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2726 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.4 MB.
-System memory in use after: 102.6 MB.
+System memory in use before: 102.8 MB.
+System memory in use after: 103.0 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3182.
-Total: 2.244800 ms (FindLiveObjects: 0.326500 ms CreateObjectMapping: 0.198900 ms MarkObjects: 1.657000 ms  DeleteObjects: 0.061300 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3182.
+Total: 2.383500 ms (FindLiveObjects: 0.333800 ms CreateObjectMapping: 0.172100 ms MarkObjects: 1.782900 ms  DeleteObjects: 0.093200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Menu.unity
-  artifactKey: Guid(8f085af761e32374e858b3d90a62c6d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Menu.unity using Guid(8f085af761e32374e858b3d90a62c6d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb704d61b170d4ee8cbbccb74629e394') in 0.015407 seconds 
+  path: Assets/Scenes/main.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/main.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536302526b1cc8cf32ec9cce28496aed') in 0.019433 seconds 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 1.81 ms, found 1 plugins.
+Registering precompiled user dll's ...
+Registered in 0.005011 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 47.2 MB.
-System memory in use after: 47.4 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.937 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.4 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3182.
-Total: 2.143300 ms (FindLiveObjects: 0.187500 ms CreateObjectMapping: 0.118700 ms MarkObjects: 1.824000 ms  DeleteObjects: 0.012000 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3185.
+Total: 5.785400 ms (FindLiveObjects: 0.384700 ms CreateObjectMapping: 0.428800 ms MarkObjects: 4.850200 ms  DeleteObjects: 0.119400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003248 seconds.
+Registered in 0.025656 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.905 seconds
+- Completed reload, in  1.319 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2705 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.8 MB.
-System memory in use after: 101.0 MB.
+Unloading 2706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.3 MB.
+System memory in use after: 101.5 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3185.
-Total: 1.959600 ms (FindLiveObjects: 0.243800 ms CreateObjectMapping: 0.158600 ms MarkObjects: 1.537500 ms  DeleteObjects: 0.018800 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3188.
+Total: 3.001300 ms (FindLiveObjects: 0.283000 ms CreateObjectMapping: 0.196200 ms MarkObjects: 2.448200 ms  DeleteObjects: 0.072100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 847.138338 seconds.
+  path: Assets/LeanTween/Examples/Material/AlphBumps.mat
+  artifactKey: Guid(12c720f1dd5674502bc1185ff99b70f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/AlphBumps.mat using Guid(12c720f1dd5674502bc1185ff99b70f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55bf5186244cda9fad28257c472f0616') in 0.472212 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000415 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/Material.001.mat
+  artifactKey: Guid(ee920b9374bc046b4a8b04eec2888d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/Material.001.mat using Guid(ee920b9374bc046b4a8b04eec2888d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ec45b2afe2fa061c949c3b46386939c') in 0.056326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/SimpleAvatarSpace.mat
+  artifactKey: Guid(9682c3da6d5384d098160b19ba3e02c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/SimpleAvatarSpace.mat using Guid(9682c3da6d5384d098160b19ba3e02c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a10e6d59051be61ed38889c515ed0ecb') in 0.033380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000433 seconds.
+  path: Assets/LeanTween/Examples/Material/TrailFollowMaterial.mat
+  artifactKey: Guid(ff16fb4a90fe84bec9c8f29698aa0eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/TrailFollowMaterial.mat using Guid(ff16fb4a90fe84bec9c8f29698aa0eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '212404b5fe05e5b9c71d1c56e9c972e6') in 0.086242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/LeanTween/Examples/Material/TrackLines.mat
+  artifactKey: Guid(54538213a935248b8ac1ce7b42140cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/TrackLines.mat using Guid(54538213a935248b8ac1ce7b42140cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29be4dae12222981bbf547ff9280bb58') in 0.070225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+  artifactKey: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73bfc51c5222557aa47c55c3d1b82acd') in 0.075359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/LeanTween/Examples/Material/TrackGlowMaterial.mat
+  artifactKey: Guid(f99cee49392444d14b5e8c16cd41348d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/TrackGlowMaterial.mat using Guid(f99cee49392444d14b5e8c16cd41348d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc6b8802c7350d0b37a76029312e751') in 0.110020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000554 seconds.
+  path: Assets/LeanTween/Examples/Material/Futoro_SineWave.mat
+  artifactKey: Guid(d2eed51ebc4ee4089986bb1639255f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/Futoro_SineWave.mat using Guid(d2eed51ebc4ee4089986bb1639255f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f9e279ce627b1ade838c859b76690d8') in 0.069674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000613 seconds.
+  path: Assets/LeanTween/Examples/Material/Futoro_PlanetMaterial.mat
+  artifactKey: Guid(6b98784ec692b4e00a86fa1044ad8998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/Futoro_PlanetMaterial.mat using Guid(6b98784ec692b4e00a86fa1044ad8998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6aab1bce02f835d590ff9943e57bb91') in 0.197879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/LineMaterial.mat
+  artifactKey: Guid(cf41397dc908943a38769b3d61f3877a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/LineMaterial.mat using Guid(cf41397dc908943a38769b3d61f3877a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c84f7a87b8e54a8c41e09525d45cdcd') in 0.032845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000435 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/Material_001.mat
+  artifactKey: Guid(d9041dec3e4f243ad92eacfec2f65378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/Material_001.mat using Guid(d9041dec3e4f243ad92eacfec2f65378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bbbe2cb4f0d3b360b0dc86a1e2775a4') in 0.032133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/LeanTween/Examples/Material/LineGlowMaterial.mat
+  artifactKey: Guid(658f4eba50cce41098da6ed347d8d270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/LineGlowMaterial.mat using Guid(658f4eba50cce41098da6ed347d8d270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0232222c300e9b81b9cbe2bfa7eb7a7c') in 0.157003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/LeanTween/Examples/Material/SpaceLineGlowMaterial.mat
+  artifactKey: Guid(4d170a8aa584240f4b18ce6a5e58ef2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/SpaceLineGlowMaterial.mat using Guid(4d170a8aa584240f4b18ce6a5e58ef2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6fbcec90e7e2b39cb9722c8ce829f0f') in 0.065919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/LeanTween/Examples/Material/AlphaReadyMaterial.mat
+  artifactKey: Guid(61731bf38a6fa4d66b536bc03fc8eb3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/AlphaReadyMaterial.mat using Guid(61731bf38a6fa4d66b536bc03fc8eb3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '982f587014091d09e6c82035d0b69a7d') in 0.162539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/LeanTween/Examples/Material/TrackFollowMaterial.mat
+  artifactKey: Guid(9efbdb862990242178d5b47a40b48e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/TrackFollowMaterial.mat using Guid(9efbdb862990242178d5b47a40b48e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cfe8629ac75e6fd102a1376a35cbe4f') in 0.028092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f9008861c035011c54267887c2643f1') in 0.095724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/LeanTween/Examples/Material/Graph.mat
+  artifactKey: Guid(a8a5e544bfa0d416892e87b12e93911b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/Graph.mat using Guid(a8a5e544bfa0d416892e87b12e93911b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fd7d7d2b2711851e20f048a16a71650') in 0.029861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000382 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/SimpleAvatarMat.mat
+  artifactKey: Guid(5732f0a6e68964f3eb5c3ebb94242055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/SimpleAvatarMat.mat using Guid(5732f0a6e68964f3eb5c3ebb94242055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb8676b03a0c2d2b262e5840ea356600') in 0.027679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000413 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482a362b8fe5ce36b302051eaf90a735') in 0.075759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000379 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/LMaterial.mat
+  artifactKey: Guid(02a8bb137b3dc465e834a60da68b0faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/LMaterial.mat using Guid(02a8bb137b3dc465e834a60da68b0faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd792e28f0cb19588474734952bf2b826') in 0.030089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000400 seconds.
+  path: Assets/LeanTween/Examples/Material/TrackCar.mat
+  artifactKey: Guid(3e55a11a05aa141af9f3be5e921cc003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/TrackCar.mat using Guid(3e55a11a05aa141af9f3be5e921cc003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caf7a91719df6e1aca15ed96d4d3f167') in 0.031219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/LeanTween/Examples/Material/DirectionalArrowMaterial.mat
+  artifactKey: Guid(79809b4fc57ad41b982c1dd5ceb812b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/DirectionalArrowMaterial.mat using Guid(79809b4fc57ad41b982c1dd5ceb812b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36b2d69b054e23de1163ae5603f4e511') in 0.028864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000419 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/SubTitleText.mat
+  artifactKey: Guid(33b82a22301d648c5afa1a682a259e5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/SubTitleText.mat using Guid(33b82a22301d648c5afa1a682a259e5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '350072d5e4680e2d7252823dcb99d19a') in 0.031723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Assets/LeanTween/Examples/Models/DirectionalArrow.fbx
+  artifactKey: Guid(d47ae0396110840289d47476d8289fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/DirectionalArrow.fbx using Guid(d47ae0396110840289d47476d8289fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f7fd92ed39ae14dc12991bdda9a5a42') in 0.127431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000379 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/No Name.mat
+  artifactKey: Guid(221234e77532a4e3b96e5cce2b41b771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/No Name.mat using Guid(221234e77532a4e3b96e5cce2b41b771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8f45dde91779de9f6c5b74b2226c6c') in 0.028062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/SimpleAvatarBlue.mat
+  artifactKey: Guid(e86c6ee57cd4c400ea5852025bc7b7c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/SimpleAvatarBlue.mat using Guid(e86c6ee57cd4c400ea5852025bc7b7c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334ffb0d0ec81711cd01a714fee851f2') in 0.030979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000603 seconds.
+  path: Assets/LeanTween/Examples/Material/ParticleGlow.mat
+  artifactKey: Guid(8de91330a48c540279c3bc6e3aff2b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/ParticleGlow.mat using Guid(8de91330a48c540279c3bc6e3aff2b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86050b3aeda7b73b41bfa28dd311345c') in 0.071939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/LeanTween/Examples/Material/PointMark.mat
+  artifactKey: Guid(e77db49bc9fb6499290655245ce9bc95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/PointMark.mat using Guid(e77db49bc9fb6499290655245ce9bc95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7dfb434ce5e1d7255a7cd0059e8c720') in 0.028648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/LeanTween/Examples/Material/WalkingStick.mat
+  artifactKey: Guid(3285d6d0bc506494b8fecba4d7aada26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/WalkingStick.mat using Guid(3285d6d0bc506494b8fecba4d7aada26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38d1f361b6d3fc143e93a8bb8fc3fc89') in 0.027346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000415 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/eanTween.mat
+  artifactKey: Guid(f619dcfcfb4564405b5fe5ea207c9199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/eanTween.mat using Guid(f619dcfcfb4564405b5fe5ea207c9199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '774e3eb61f852d0dfae6dc3b8c92fe24') in 0.029515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/SimpleAvatarHat.mat
+  artifactKey: Guid(894fe1d86fb5943f6a486e218bba2072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/SimpleAvatarHat.mat using Guid(894fe1d86fb5943f6a486e218bba2072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0981ae855b7fad684ce85b271875f0') in 0.030361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/LeanTween/Examples/Material/Mock2d.mat
+  artifactKey: Guid(ab11516f0780f4d438844432fc7e8070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/Mock2d.mat using Guid(ab11516f0780f4d438844432fc7e8070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3687a98d0b7c94aa70f7ede7f6bcea7b') in 0.050077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/LeanTween/Examples/Material/Ground.mat
+  artifactKey: Guid(c6784005974824c55b2b59b5bda24153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/Ground.mat using Guid(c6784005974824c55b2b59b5bda24153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88211ec2329d5714064ceb5a2ec3d1cd') in 0.030637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/LeanTween/Examples/Material/GridLines.mat
+  artifactKey: Guid(9a06e258e3bf640e885048b32fdf51b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Material/GridLines.mat using Guid(9a06e258e3bf640e885048b32fdf51b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9177d9cc836d70585f8b7300a35644bf') in 0.180134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/SimpleAvatarAlphaBlue.mat
+  artifactKey: Guid(39a7c2c726d36466a82bb11886f760e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/SimpleAvatarAlphaBlue.mat using Guid(39a7c2c726d36466a82bb11886f760e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7881ebf044a6a0fdb02add79628e54a0') in 0.032142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000483 seconds.
+  path: Assets/LeanTween/Examples/Models/Materials/Material.mat
+  artifactKey: Guid(af31d53076fd745faa5f05dae96c15c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/Materials/Material.mat using Guid(af31d53076fd745faa5f05dae96c15c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44ad436f9fbaebe363986c652688dbe4') in 0.028154 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002637 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.002 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2707 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.7 MB.
+System memory in use after: 107.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3267.
+Total: 3.203700 ms (FindLiveObjects: 0.422900 ms CreateObjectMapping: 0.251600 ms MarkObjects: 2.470000 ms  DeleteObjects: 0.056600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002578 seconds.
+Registered in 0.002629 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.936 seconds
+- Completed reload, in  1.005 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2705 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 101.1 MB.
+Unloading 2706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.7 MB.
+System memory in use after: 107.9 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3188.
-Total: 2.408800 ms (FindLiveObjects: 0.360400 ms CreateObjectMapping: 0.205800 ms MarkObjects: 1.816200 ms  DeleteObjects: 0.025300 ms)
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.63 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 47.4 MB.
-System memory in use after: 47.6 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3188.
-Total: 2.341100 ms (FindLiveObjects: 0.261600 ms CreateObjectMapping: 0.180500 ms MarkObjects: 1.878500 ms  DeleteObjects: 0.019100 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3270.
+Total: 3.360500 ms (FindLiveObjects: 0.420900 ms CreateObjectMapping: 0.248500 ms MarkObjects: 2.610200 ms  DeleteObjects: 0.079000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4146,6 +4146,7 @@ GameObject:
   - component: {fileID: 1384894988}
   - component: {fileID: 1384894989}
   - component: {fileID: 1384894990}
+  - component: {fileID: 1384894991}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -4183,10 +4184,11 @@ MonoBehaviour:
   TimeOfDaySlider: {fileID: 1940861065}
   MainMenu: {fileID: 647020267}
   StartCanvas: {fileID: 1622220552}
-  Settings: {fileID: 959320918}
+  SettingsCanvas: {fileID: 0}
   Tutorial: {fileID: 2003705417}
   MyVideoPlayer: {fileID: 1002409423}
   Music: {fileID: 1002409424}
+  settings: {fileID: 1384894991}
 --- !u!114 &1384894990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4199,6 +4201,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ff3df7de59ec943b1ad35bd3597f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1384894991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384894987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f5a1da541d4b3499fde10369856308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasCrashed: 0
+  HasPlayed: 0
 --- !u!1 &1387841354
 GameObject:
   m_ObjectHideFlags: 0

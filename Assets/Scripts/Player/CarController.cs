@@ -44,6 +44,8 @@ public class CarController : MonoBehaviour
 
     public GameObject HUD;
 
+    public Settings settings;
+
     private float max_speed = 150;
 
     public string CarSpeed;
@@ -176,9 +178,6 @@ public class CarController : MonoBehaviour
         var newrot = rot * Quaternion.Euler(0, UnityEngine.Random.Range(turnLeftForce, turnRightForce), 0);
         transform.rotation = newrot;
 
-        Debug.Log(turnLeftForce);
-        Debug.Log(turnRightForce);
-
         StartCoroutine(SwingRandomly());
     }
 
@@ -189,22 +188,25 @@ public class CarController : MonoBehaviour
         blackImage.gameObject.SetActive(false);
         Main.gameObject.SetActive(false);
         HUD.SetActive(false);
-        if (!StoredVariables.HasCrashed)
+        if (!settings.HasCrashed)
         {
             FirstAnimation.gameObject.SetActive(true);
             yield return new WaitForSeconds(10);
             FirstAnimation.gameObject.SetActive(false);
             Hastaganimation.gameObject.SetActive(true);
             yield return new WaitForSeconds(3);
-            StoredVariables.HasCrashed = true;
+            settings.HasCrashed = true;
+            settings.SaveSettings();
+            Debug.Log("settings.HasCrashed = " + settings.HasCrashed);
             SceneManager.LoadScene(1);
         }
             
-        if (StoredVariables.HasCrashed)
+        if (settings.HasCrashed)
         {
             Hastaganimation.gameObject.SetActive(true);
             yield return new WaitForSeconds(3);
-            StoredVariables.HasCrashed = true;
+            settings.HasCrashed = true;
+            settings.SaveSettings();
             SceneManager.LoadScene(1);
         }
             

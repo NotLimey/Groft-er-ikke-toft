@@ -13,32 +13,35 @@ public class MenuManager : MonoBehaviour
 
     public Canvas MainMenu;
     public Canvas StartCanvas;
-    public Canvas Settings;
+    public Canvas SettingsCanvas;
     public Canvas Tutorial;
 
     public VideoPlayer MyVideoPlayer;
 
     public AudioSource Music;
 
+    public Settings settings;
+
+    
+
     public void Start()
     {
+        settings.LoadSettings();
 
-        if(StoredVariables.HasPlayed) 
+        if(settings.HasPlayed)
         {
             MainMenu.gameObject.SetActive(true);
             StartCanvas.gameObject.SetActive(false);
-            Settings.gameObject.SetActive(false);
+            SettingsCanvas.gameObject.SetActive(false);
             Tutorial.gameObject.SetActive(false);
+            return;
         }
-        else
-        {
-            MainMenu.gameObject.SetActive(false);
-            StartCanvas.gameObject.SetActive(false);
-            Settings.gameObject.SetActive(false);
-            Tutorial.gameObject.SetActive(false);
-            Music.Stop();
-            PlayAnimation();
-        }
+        MainMenu.gameObject.SetActive(false);
+        StartCanvas.gameObject.SetActive(false);
+        SettingsCanvas.gameObject.SetActive(false);
+        Tutorial.gameObject.SetActive(false);
+        Music.Stop();
+        PlayAnimation();
     }
 
     private void PlayAnimation()
@@ -51,6 +54,7 @@ public class MenuManager : MonoBehaviour
     {
         StoredVariables storedVariables = this.GetComponent<StoredVariables>();
         storedVariables.Setvalue(PromilleSlider.value, TimeOfDaySlider.value);
+        Debug.Log("StoredVariables.HasCrashed = " + StoredVariables.HasCrashed);
         SceneManager.LoadSceneAsync(2);
     }
 
@@ -65,21 +69,21 @@ public class MenuManager : MonoBehaviour
     {
         MainMenu.gameObject.SetActive(false);
         StartCanvas.gameObject.SetActive(true);
-        Settings.gameObject.SetActive(false);
+        SettingsCanvas.gameObject.SetActive(false);
     }
 
     public void GoToMainMenu()
     {
         MainMenu.gameObject.SetActive(true);
         StartCanvas.gameObject.SetActive(false);
-        Settings.gameObject.SetActive(false);
+        SettingsCanvas.gameObject.SetActive(false);
     }
 
     public void GoToSettings()
     {
         MainMenu.gameObject.SetActive(false);
         StartCanvas.gameObject.SetActive(false);
-        Settings.gameObject.SetActive(true);
+        SettingsCanvas.gameObject.SetActive(true);
     }
 
     public void Quit()
@@ -93,7 +97,8 @@ public class MenuManager : MonoBehaviour
         MyVideoPlayer.Stop();
         Music.Play();
         StoredVariables.Promille = 2;
-        StoredVariables.HasPlayed = true;
+        settings.HasPlayed = true;
+        settings.SaveSettings();
         LoadTutorial();
     }
 
@@ -101,7 +106,7 @@ public class MenuManager : MonoBehaviour
     {
         MainMenu.gameObject.SetActive(false);
         StartCanvas.gameObject.SetActive(false);
-        Settings.gameObject.SetActive(false);
+        SettingsCanvas.gameObject.SetActive(false);
         Tutorial.gameObject.SetActive(true);
     }
 }

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public CarController _carController;
     public StoredVariables StoredV;
     public RawImage Vignett;
-    public Image Blur;
+    public RawImage Blur;
 
     public bool SliderActive = false;
 
@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     public GameObject Text2;
 
     public GameObject NextImgButton;
+    public GameObject PressSpaceToStart;
+
+    private GameObject currentGameObject;
+    private GameObject nextGameObject;
 
     public float TimeBeetweenVelocityDisplay = 0;
 
@@ -32,6 +36,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         CheckPromille();
+        PressSpaceToStart.SetActive(false);
         if(!StoredVariables.HasPlayed)
         {
             Time.timeScale = 0;
@@ -58,7 +63,6 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && SliderActive)
         {
             FadeOut();
-            Debug.Log("Yes");
         }
     }
 
@@ -67,72 +71,110 @@ public class GameManager : MonoBehaviour
         alpha = 0;
         TimeBeetweenVelocityDisplay = 0;
         if (StoredVariables.Promille > .3)
-        {
-            alpha = 0f;
-            TimeBeetweenVelocityDisplay = .5f;
-        }
+            SetPromilleValues(0f, .5f);
 
         if (StoredVariables.Promille > .6)
-        {
-            alpha = 0.1f;
-            TimeBeetweenVelocityDisplay = .7f;
-        }
+            SetPromilleValues(0.1f, .7f);
 
         if (StoredVariables.Promille > .9)
-        {
-            alpha = 0.18f;
-            TimeBeetweenVelocityDisplay = 1f;
-        }
+            SetPromilleValues(0.18f, 1f);
 
         if (StoredVariables.Promille > 1.3)
-        {
-            alpha = 0.23f;
-            TimeBeetweenVelocityDisplay = 1.7f;
-        }
+            SetPromilleValues(0.23f, 1.7f);
 
         if (StoredVariables.Promille > 1.6)
-        {
-            alpha = 0.45f;
-            TimeBeetweenVelocityDisplay = 1.9f;
-        }
+            SetPromilleValues(0.45f, 1.9f);
 
         if (StoredVariables.Promille > 2.1)
-        {
-            alpha = 0.66f;
-            TimeBeetweenVelocityDisplay = 2.7f;
-        }
+            SetPromilleValues(0.66f, 2.7f);
 
         if (StoredVariables.Promille > 3)
-        {
-            alpha = 0.90f;
-            TimeBeetweenVelocityDisplay = 3.7f;
-        }
+            SetPromilleValues(.9f, 3.7f);
             
         if (StoredVariables.Promille > .2)
         {
-            Color currentColor = Vignett.color;
-            currentColor.a = alpha;
-            Vignett.color = currentColor;
-
-            Color currentColor2 = Blur.color;
-            currentColor2.a = alpha;
-            Blur.color = currentColor2;
+            SetAlpha(Blur);
+            SetAlpha(Vignett);
         }
+    }
+
+    private void SetAlpha(RawImage img)
+    {
+        Color currentColor = img.color;
+        currentColor.a = alpha;
+        img.color = currentColor;
+    }
+
+    public void SetPromilleValues(float a, float time)
+    {
+        alpha = a;
+        TimeBeetweenVelocityDisplay = time;
     }
 
     public void FadeOut()
     {
-        
+        if(infoOn == 1)
+        {
+            FadeOutAction(infoStartText);
+            nextGameObject = SpeedometerInfo;
+        }
+        if(infoOn == 2)
+        {
+            FadeOutAction(SpeedometerInfo);
+            nextGameObject = Text1;
+        }
+        if (infoOn == 3)
+        {
+            FadeOutAction(Text1);
+            nextGameObject = Text2;
+        }
+        if (infoOn == 4)
+            FadeOutAction(Text2);
+    }
+
+    public void FadeOutAction(GameObject gameObject)
+    {
+        NextImgButton.SetActive(false);
+        currentGameObject = gameObject;
+        LeanTween.move(gameObject.GetComponent<RectTransform>(), new Vector3(-4000f, 0f, 0f), 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(SetFadedOutObjectDisabled).setIgnoreTimeScale(true);
+        if(infoOn == 4)
+            StartGame();
+    }
+
+    public void SetFadedOutObjectDisabled()
+    {
+        currentGameObject.SetActive(false);
+        if (infoOn == 4)
+        {
+            StartGame();
+        }else
+        {
+            FadeIn(nextGameObject);
+        }
     }
 
     private void StartGame()
     {
-        throw new NotImplementedException();
+        Time.timeScale = 1;
+        infoBackground.SetActive(false);
+        SpeedometerInfo.SetActive(false);
+        Text1.SetActive(false);
+        Text2.SetActive(false);
+        StartCoroutine(DisplayVelocity());
     }
 
-    public void FadeIn()
+    public void FadeIn(GameObject gameOb)
     {
-        
+        gameOb.SetActive(true);
+        LeanTween.alpha(gameOb, 1f, 1f).setEase(LeanTweenType.linear).setIgnoreTimeScale(true);
+        infoOn++;
+        if(infoOn == 4)
+        {
+            PressSpaceToStart.SetActive(true);
+            NextImgButton.SetActive(false);
+        }
+        else
+            NextImgButton.SetActive(true);
     }
 
     IEnumerator DisplayVelocity()
